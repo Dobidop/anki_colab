@@ -1,0 +1,29 @@
+name: Fel i kort
+description: Något stämmer inte i ett kort. Länken "rapportera fel" längst ner på kortet fyller i vilket kort det gäller.
+title: "Fel i kort: "
+labels: [fel]
+body:
+  - type: input
+    id: kort
+    attributes:
+      label: Vilket kort
+      description: Id och fil står längst ner på kortets baksida i Anki. Annars räcker frågan.
+      placeholder: "7c426b13 · 972G03/begreppslista.md"
+    validations:
+      required: true
+  - type: textarea
+    id: fel
+    attributes:
+      label: Vad är fel?
+    validations:
+      required: true
+  - type: textarea
+    id: forslag
+    attributes:
+      label: Hur borde det stå?
+  - type: input
+    id: kalla
+    attributes:
+      label: Källa med sidnummer
+      description: Var står det rätta? Särskilt viktigt för kort märkta ⚠.
+      placeholder: "McMillan (2018), s. 517"

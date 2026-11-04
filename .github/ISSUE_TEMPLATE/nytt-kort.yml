@@ -1,0 +1,48 @@
+name: Nytt kort
+description: Föreslå ett kort, eller ett svar på en fråga som saknar baksida
+title: "Nytt kort: "
+labels: [nytt-kort]
+body:
+  - type: dropdown
+    id: kurs
+    attributes:
+      label: Kurs
+      options:
+        - 972G01 Allmändidaktik
+        - 972G17 Utveckling och lärande
+        - 972G03 Kunskapsbedömning
+        - 972G04 Utbildningshistoria och värdegrund
+        - Annan (skriv i fältet Övrigt)
+    validations:
+      required: true
+  - type: textarea
+    id: fraga
+    attributes:
+      label: Fråga (framsida)
+      description: En fråga per kort. Finns frågan redan utan svar, klistra in den som den står.
+    validations:
+      required: true
+  - type: textarea
+    id: svar
+    attributes:
+      label: Svar (baksida)
+      description: Med egna ord. Högst fem rader; blir det längre är det två kort.
+    validations:
+      required: true
+  - type: input
+    id: kalla
+    attributes:
+      label: Källa med sidnummer
+      placeholder: "McMillan (2018), s. 22 · eller föreläsning: Eriksson Del 2 (00:12:40)"
+    validations:
+      required: true
+  - type: textarea
+    id: referens
+    attributes:
+      label: Fullständig referens (APA 7)
+      description: Behövs bara om källan inte redan finns i leken.
+      placeholder: "Palmér, H. (2023). *Bedömning i yngre skolåldrar*. Skolverket."
+  - type: textarea
+    id: ovrigt
+    attributes:
+      label: Övrigt
